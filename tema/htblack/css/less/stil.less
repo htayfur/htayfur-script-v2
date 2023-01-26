@@ -1,0 +1,620 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+// Sıfırlama bitti
+@import "sourcesans/stylesheet.css";
+@normalfont: 'source_sans_proregular';
+@boldfont: 'source_sans_probold';
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #F1F1F1;
+  font: 14px @normalfont, sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #FF9B00;
+}
+.ortaladiv{
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.temizle{
+  clear: both;
+}
+.gizle{
+  display: none;
+}
+.golgelendir{
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.30);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.30);
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.30);
+}
+#header{
+  width: 100%;
+  min-height: 125px;
+  background-color: #191919;
+  .logo{float: left;margin-top: 20px;margin-left: 10px; margin-bottom: 20px;}
+  .menuler{float:right;
+    ul{margin-top: 50px;}
+    ul li{float: left;padding: 8px 10px 8px 30px;background-color: #2c2c2c;border-radius: 10px;margin: 5px;font-weight: bold;;
+      &:hover{
+        background-color: #FF0000;
+      }}
+    ul li a{color: #FFFFFF;display: block;}
+  }
+  .menu{}
+}
+.solaicon{
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+.menuanasayfa{
+  background-image: url("../iconlar/icon/anasayfa.png");
+  .solaicon;
+}
+.menubenkimim{
+  background-image: url("../iconlar/icon/benkimim.png");
+  .solaicon;
+}
+.menuyeteneklerim{
+  background-image: url("../iconlar/icon/yeteneklerim.png");
+  .solaicon;
+}
+.menuizlediklerim{
+  background-image: url("../iconlar/icon/izlediklerim.png");
+  .solaicon;
+}
+.menudinlediklerim{
+  background-image: url("../iconlar/icon/dinlediklerim.png");
+  .solaicon;
+}
+.menuiletisim{
+  background-image: url("../iconlar/icon/iletisim.png");
+  .solaicon;
+}
+.menumenu{
+  display: none;
+  padding: 8px 10px 8px 30px;
+  margin: 0px 5px;
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #2c2c2c;
+  background-image: url("../iconlar/icon/menu.png");
+  .solaicon;
+}
+#ortaalan{
+  margin-top: 25px;
+}
+#solkisim{
+  float: left;
+  width: 100%;
+  max-width: 750px;
+}
+#slider{
+  display: none;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 300px;
+  margin-bottom: 25px;
+  ul{margin: 0px;padding: 0px;position: relative;}
+  ul li{float: left;position: relative;top: 0;left: 0;width: 100%;}
+  ul li img{width: 100%;max-height: 300px;}
+  .slider{position:absolute;bottom: 0px;width: 100%;background-color: rgba(56, 56, 56, 0.80);padding: 10px 0px 10px 0px;}
+  .sliderbaslik{margin: 10px;font-size: 20px;font-weight: bold;color: #FFFFFF;}
+  .golgelendir;
+}
+.yazialani{
+}
+.yazi{
+  background-color: #FFFFFF;
+  width: 100%;
+  margin: 0px 0px 25px 0px;
+  .golgelendir;
+}
+.yazibaslik{
+  padding: 10px;font-size: 18px;font-weight: bold;
+  a{
+    color: #1F1F1F;
+    &:hover{
+      color: #FF9B00;
+    }
+  }
+}
+.yazibilgi{
+  border-top: 1px solid #BCBCBC;
+  border-bottom: 1px solid #BCBCBC;
+  padding: 0px 10px;
+  margin: 0 auto;
+  ul{}
+  ul li{float: left;padding: 5px 0px 5px 20px;margin-right: 20px;}
+}
+.solaiconiki{
+  background-repeat: no-repeat;
+  background-position: 0px;
+}
+.ybilgi{
+  font-size: 12px;
+  line-height: 14px;
+  color: #6c6c6c;
+  a{
+    color: #6c6c6c;
+    &:hover{
+      color: #FF9B00;
+    }
+  }
+}
+.ybilgiyazar{
+  background-image: url("../iconlar/icon/yazar.png");
+  .solaiconiki;
+}
+.ybilgikategori{
+  background-image: url("../iconlar/icon/kategori.png");
+  .solaiconiki;
+}
+.ybilgitarih{
+  background-image: url("../iconlar/icon/tarih.png");
+  .solaiconiki;
+}
+.ybilgisaat{
+  background-image: url("../iconlar/icon/saat.png");
+  .solaiconiki;
+}
+.onecikarilmis{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  img{
+    width: 100%;
+  }
+}
+.yaziozet{
+  font-size: 14px;
+  color: #6c6c6c;
+  padding: 10px;
+}
+.yaziicerik{
+  font-size: 14px;
+  color: #6c6c6c;
+  padding: 10px;
+}
+.yorumlar{
+  border-top: 1px solid #BCBCBC;
+  padding: 10px 10px;
+  width: 95%;
+}
+.devaminioku{
+  max-width: 140px;
+  max-height: 40px;
+  border-radius: 5px;
+  background-color: #1F1F1F;
+  font-size: 14px;
+  color: #FAFAFA;
+  padding: 10px;
+  float: right;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  font-weight: bold;
+  a{color: #FAFAFA}
+  &:hover{
+    background-color: #FF0000;
+    color: #FAFAFA;
+  }
+}
+#oncekivesonraki{
+  width: 100%;
+  margin: 25px 0px;
+}
+.oncekisayfa{
+  float: left;
+  font-size: 14px;
+  color: #FAFAFA;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #1F1F1F;
+  a{color: #FAFAFA}
+  &:hover{
+    background-color: #FF0000;
+    color: #FAFAFA;
+  }
+}
+.sonrakisayfa{
+  float: right;
+   font-size: 14px;
+   color: #FAFAFA;
+   padding: 10px;
+   border-radius: 5px;
+   text-align: center;
+   background-color: #1F1F1F;
+   a{color: #FAFAFA}
+   &:hover{
+     background-color: #FF0000;
+     color: #FAFAFA;
+   }
+}
+
+#sagkisim{
+  width: 100%;
+  max-width: 300px;
+  float: right;
+  margin-right: 50px;
+}
+#sosyalmedya{
+  margin-bottom: 25px;
+}
+.sm{
+  float: left;margin-right: 15px;
+  opacity: 0.8;
+  &:hover{opacity: 1;}
+}
+.bilesen{
+  background-color: #FFFFFF;
+  margin: 25px 0px 25px 0px;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 12px;
+  color: #191919;
+  padding-bottom: 5px;
+  .golgelendir;
+  ul{padding: 0px;margin: 0px;}
+  ul li{padding: 10px 0px 10px 35px;background-image: url("../iconlar/icon/yildiz.png");background-position: 10px;background-repeat: no-repeat;font-weight: bold;border-bottom: 1px solid #BCBCBC;
+  a{
+    color: #191919;
+    &:hover{
+      color: #FF9B00;
+    }
+  }}
+}
+.bilesenbaslik{
+  max-height: 30px;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  padding: 10px 5px 10px 35px;
+}
+.bilesenkategori{
+  background-image: url("../iconlar/icon/kategoribilesen.png");
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+.bilesensonyazilar{
+  background-image: url("../iconlar/icon/sonyazilar.png");
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+#footer{
+  background-color: #1F1F1F;
+  width: 100%;
+  min-height: 35px;
+  margin-top: 25px;
+}
+.footeruyari{
+  font-size: 13px;
+  color: #FAFAFA;
+  padding: 10px 5px 5px 10px;
+}
+
+h1{
+  font-size: 24px;
+  color: #191919;
+}
+h2{
+  font-size: 22px;
+  color: #191919;
+}
+h3{
+  font-size: 20px;
+  color: #191919;
+}
+h4{
+  font-size: 18px;
+  color: #191919;
+}
+h5{
+  font-size: 16px;
+  color: #191919;
+}
+
+.yeteneklerkismi{
+  background-color: #FFFFFF;
+  .golgelendir;
+}
+.sayfabaslik{
+  padding: 10px;
+  border-bottom: 1px dotted #BCBCBC;
+}
+.yetenekler{
+  padding: 0px 10px;
+}
+.yetenek{
+  border-bottom: 1px dotted #6c6c6c;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+.yetenekadi{
+  font-size: 18px;
+  font-weight: bold;
+  color: #191919;
+  float: left;
+  margin-right: 10px;
+}
+.yetenekaciklama{
+  float: left;
+  font-size: 18px;
+  color: #6c6c6c;
+}
+.yetenekarkaplan{
+  width: 100%;
+  margin: 5px 0px;
+  background-color: #BCBCBC;
+  border-radius: 2px;
+}
+.yetenekyuzde{
+  width: 10%;
+  border-radius: 2px;
+  background-color: #191919;
+}
+.yetenekorani{
+  padding: 5px;
+  color: #FAFAFA;
+  font-size: 14px;
+}
+
+.izlediklerimkismi{
+  background-color: #FFFFFF;
+  .golgelendir;
+}
+.izlediklerim{
+  max-width: 225px;
+  border-radius: 0px 0px 5px 5px;
+  border: 1px solid #BCBCBC;
+  margin: 10px;
+  float: left;
+  img{
+    width: 100%;
+    max-width: 225px;
+  }
+}
+.izlediklerimfilm{
+  padding: 5px 0px;
+  text-align: center;
+  color: #191919;
+  border-bottom: 1px dotted;
+  font-weight: bold;
+}
+.izlediklerimyil{
+  text-align: center;
+  padding: 5px 0px;
+
+}
+.dinlediklerimkismi{
+  background-color: #FFFFFF;
+  .golgelendir;
+}
+.dinlemealani{
+  padding: 10px;
+  border-top: 1px dotted #BCBCBC;
+  border-bottom: 1px dotted #BCBCBC;
+  text-align: center;
+}
+.dinlediklerim{
+  padding: 10px 10px 10px 35px;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #BCBCBC;
+  border-top: 1px solid #BCBCBC;
+  background: url("../iconlar/icon/muzik.png") no-repeat 10px;
+  span{
+    color: #191919;
+    &:hover{
+      color: #FF9B00;
+    }
+  }
+}
+.gizlimuzikkodu{
+  display: none;
+}
+.iletisimkismi{
+  background-color: #FFFFFF;
+  .golgelendir;
+}
+.iletisim{
+  padding: 10px;
+  font-size: 14px;
+  color: #6c6c6c;
+  input{
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 10px 0px;
+    border: 1px solid #BCBCBC;
+  }
+  textarea{
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 10px 0px;
+    border: 1px solid #BCBCBC;
+    color: #9C9C9C;
+    min-height: 150px;
+  }
+}
+.guvenliksorusu{
+  margin: 10px 0px;
+}
+#güvenliksorusucevap{
+  max-width: 110px;
+}
+#iletisimgonder{
+  max-width: 125px;
+  padding: 10px;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  &:hover{
+    background-color: #FF0000;
+  }
+}
+.hatasayfasi{
+  background: #FFFFFF;
+  .golgelendir;
+}
+.uyarimesaji{
+  padding: 10px;
+  margin: 10px 0px;
+  color: #FFFFFF;
+  font-size: 14px;
+  border-radius: 5px;
+  display: none;
+}
+.menugizle{
+
+}
+.altbosluk{
+  padding: 10px 0px;
+}
+.altboslukiki{
+  padding: 5px 0px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1120px){
+  #sagkisim{float: none;}
+}
+@media screen and (max-width: 980px) {
+  #header .logo{float: none;max-width: 200px;margin: 0 auto;padding: 20px;}
+  #header .menuler{float: none};
+  #header .menuler ul{margin-top: 10px;}
+  #header .menuler ul li{color: #FFFFFF;}
+  #solkisim{float:none;max-width: none};
+  #slider{display: none;}
+  .yazibilgi{max-width: 95%;}
+  #oncekivesonraki{max-width: none;}
+  #ortaalan{margin: 25px 10px;}
+  #sagkisim{max-width: none;}
+}
+@media screen and (max-width: 765px){
+  #header .menuler ul{margin-top: 10px;margin-bottom: 10px;}
+  #header .menuler ul li{float:none; color: #FFFFFF;border-radius: inherit;display: none;}
+  #header .menuler ul li a{display: block;}
+  #header .menuler .menumenu{display: block;cursor: pointer;}
+}
+
+/* Responsive Bitti */
+
+/* Vurgulayıcı kodları */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #2b2b2b;
+}
+.hljs {
+  color: #bababa;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-link,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal {
+  color: #6896ba;
+}
+
+.hljs-code,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-attribute,
+.hljs-name,
+.hljs-variable {
+  color: #cb7832;
+}
+
+.hljs-params {
+  color: #b9b9b9;
+}
+
+.hljs-string,
+.hljs-subst,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-symbol,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-addition {
+  color: #e0c46c;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #7f7f7f;
+}
